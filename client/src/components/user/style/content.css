@@ -1,0 +1,27 @@
+.content{
+    margin: 40px;
+    min-height: 800px;
+    width: 90%;
+    border: 3px solid #000000;
+}
+
+.register{
+    text-align: left;
+    min-height: 600px;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+.login{
+    text-align: left;
+    min-height: 400px;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
