@@ -7,7 +7,7 @@ import {
 import { useState } from 'react';
 import UserContext from './context/UserContext';
 import Content from './components/user/Content'
-//import Manager from "./components/pirate/Manager";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   
@@ -21,8 +21,8 @@ function App() {
             <Route exact path="/">
               <Content></Content>
             </Route>
-            <Route path="/pirates">
-              
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
             </Route>
           </Switch>
         </Router>

@@ -6,13 +6,13 @@ import {
     useRouteMatch
 } from "react-router-dom";
 import List from "./List";
-import PirateForm from "./PirateForm";
+import ProjectForm from "./ProjectForm"
 import Header from "./Header";
-import PirateDetail from "./PirateDetail";
-import "./style/manager.css";
+import Footer from "./Footer";
+import "./style/dashboard.css";
 
 
-const Manager = () => {
+const Dashboard = () => {
 
     const { path, url } = useRouteMatch();
 
@@ -20,26 +20,30 @@ const Manager = () => {
 
     return (
         <>
-          <div className="content">
-            <Router>
-               
+            <div className="dashboard">
+                <Router>
+
                     <Header></Header>
                     <Switch>
+                        {
+                        /*
                         <Route exact path={`${path}`}>
                             <List pirates={pirates} setPirates={setPirates} />
                         </Route>
+                       */
+                    }
                         <Route path={`${path}/new`}>
-                            <PirateForm new={true} />
+                            <ProjectForm new={true} />
                         </Route>
-                        <Route path={`${path}/view/:id`}>
-                            <PirateDetail view={true} />
-                        </Route>
+
+                         
                     </Switch>
-                
-            </Router>
+                    <Footer></Footer>
+
+                </Router>
             </div>
         </>
     )
 }
 
-export default Manager;
+export default Dashboard;

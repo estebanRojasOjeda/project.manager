@@ -1,6 +1,4 @@
 .head{
-    background-color: rgb(109, 65, 65); 
-    color: #ffffff;
     min-height: 80px;
     min-width: 100%;
     text-align: center;
@@ -10,8 +8,3 @@
 
 }
 
-.head Button{
-    position: relative;
-    left: 30%;
-
-}

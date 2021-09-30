@@ -32,7 +32,7 @@ const Login = () => {
                 if (resp.data.success) {
                     context.setUser(resp.data.user);
                     sessionStorage.setItem('USER_DATA', JSON.stringify(resp.data.user));
-                    history.push('/pirates');
+                    history.push('/dashboard');
                 }
             }).catch(err => {
                 Swal.fire('Error', err.response.data.message, 'error');
