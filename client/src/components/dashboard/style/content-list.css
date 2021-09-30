@@ -1,0 +1,31 @@
+.content-list{
+    text-align: center;
+    padding: 2px;
+}
+
+.backlog{
+    width: 250px;
+    height: 500px;
+    display: inline-block;
+    overflow: scroll;
+    vertical-align: top;
+}
+
+.pro{
+    width: 250px;
+    height: 500px;
+    display: inline-block;
+    overflow: scroll;
+    vertical-align: top;
+}
+
+
+.done{
+    width: 250px;
+    height: 500px;
+    display: inline-block;
+    overflow: scroll;
+    vertical-align: top;
+}
+
+

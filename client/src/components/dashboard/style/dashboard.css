@@ -1,8 +1,9 @@
 .dashboard{
-    margin: 40px;
+    margin: 20px;
     height: 700px;
     width: 90%;
     border: 3px solid #000000;
+    text-align: left;
 }
 
 .footer Button{

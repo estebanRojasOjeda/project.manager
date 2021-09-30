@@ -1,7 +1,9 @@
-.register{
+.project-form{
     text-align: left;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
+    height: 450px;
+    border: solid 1px #000;
 }
 
 

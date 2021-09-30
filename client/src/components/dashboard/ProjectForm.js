@@ -41,6 +41,7 @@ const ProjectForm = (props) => {
                     hist.push('/dashboard')
                 }).catch(err => {
                     for (let field in err.response.data.errors) {
+
                         setErrors({
                             ...errors,
                             [field]: err.response.data.errors[field].message
@@ -77,31 +78,35 @@ const ProjectForm = (props) => {
     }
 
     return (
-        <div className="register">
-            <Form onSubmit={save}>
-                <Row>
-                    <Col xs={12}>
-                        <FormGroup>
-                            <Label>Nombre Proyecto</Label>
-                            <Input type="tex" name="name" value={inputs.name} onChange={updateFormValue} required />
-                            {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
-                        </FormGroup>
-                    </Col>
-                    <Col xs={12}>
-                        <FormGroup>
-                            <Label>Fecha</Label>
-                            <Input type="date" name="date" value={inputs.date} onChange={updateFormValue} required />
-                            {errors.date && <span style={{ color: 'red' }}>{errors.date}</span>}
-                        </FormGroup>
-                    </Col>
-  
-                    <Col xs={12} className="mt-3">
-                        {!props.view && <Button type="submit">Crear Proyecto</Button>}
-                        <Button style={{ marginLeft: '10px' }} type="button" onClick={back}>Back</Button>
-                    </Col>
-                </Row>
-            </Form>
-        </div>
+        <>
+            <h3>Planificar nuevo proyecto</h3>
+            <div className="project-form">
+
+                <Form onSubmit={save}>
+                    <Row>
+                        <Col xs={12}>
+                            <FormGroup>
+                                <Label>Nombre Proyecto</Label>
+                                <Input type="tex" name="name" value={inputs.name} onChange={updateFormValue} required minLength="3" />
+                                {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
+                            </FormGroup>
+                        </Col>
+                        <Col xs={12}>
+                            <FormGroup>
+                                <Label>Fecha</Label>
+                                <Input type="date" name="date" value={inputs.date} onChange={updateFormValue} required />
+                                {errors.date && <span style={{ color: 'red' }}>{errors.date}</span>}
+                            </FormGroup>
+                        </Col>
+
+                        <Col xs={12} className="mt-3">
+                            {!props.view && <Button type="submit">Crear Proyecto</Button>}
+                            <Button style={{ marginLeft: '10px' }} type="button" onClick={back}>Dashboard</Button>
+                        </Col>
+                    </Row>
+                </Form>
+            </div>
+        </>
     )
 }
 

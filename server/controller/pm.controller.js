@@ -15,7 +15,7 @@ module.exports.createPm = (req, res) => {
 }
 
 module.exports.findProjects = (req, res) => {
-    Pm.find({}).sort({name:1})
+    Pm.find({}).sort({date:1})
         .then(Projects => res.json({ Projects: Projects }))
         .catch(err => res.json({ message: "Error al listar", error: err }));
 }

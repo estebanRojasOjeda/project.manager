@@ -11,7 +11,7 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <Button style={{ marginLeft: '10px' }} type="button" onClick={newPirate} color="primary">Ingresar nuevo proyecto</Button>
+            <Button style={{ marginLeft: '10px' }} type="button" onClick={newPirate} color="primary">Registrar Proyecto</Button>
         </div>
     )
 }
